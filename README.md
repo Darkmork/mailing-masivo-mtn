@@ -11,3 +11,14 @@
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Backend (Spring Boot)
+
+1. Go to the backend directory:
+   `cd backend`
+2. Run the tests:
+   `mvn test`
+3. Start the server:
+   `mvn spring-boot:run`
+4. Verify it's running at:
+   `http://localhost:8080/api/health`
