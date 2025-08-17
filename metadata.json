@@ -1,0 +1,5 @@
+{
+  "name": "Mailing masivo MTN",
+  "description": "Una aplicación web para gestionar listas de contactos, plantillas de correo y campañas de mailing masivo para el Colegio Monte Tabor y Nazaret.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mailing masivo MTN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer base {
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 210 79% 22%;
+        --primary-foreground: 210 40% 98%;
+        --primary-100: 210 67% 94%;
+        --primary-600: 208 65% 33%;
+        --primary-700: 209 65% 25%;
+        --primary-900: 210 79% 17%;
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 216 33% 97%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 35 100% 47%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 210 79% 22%;
+        --radius: 0.5rem;
+      }
+    }
+    @layer base {
+      * {
+        @apply border-border;
+      }
+      body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+          padding: "2rem",
+          screens: {
+            "2xl": "1400px",
+          },
+        },
+        extend: {
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--primary))",
+              foreground: "hsl(var(--primary-foreground))",
+              100: "hsl(var(--primary-100))",
+              600: "hsl(var(--primary-600))",
+              700: "hsl(var(--primary-700))",
+              900: "hsl(var(--primary-900))",
+            },
+            secondary: {
+              DEFAULT: "hsl(var(--secondary))",
+              foreground: "hsl(var(--secondary-foreground))",
+            },
+            destructive: {
+              DEFAULT: "hsl(var(--destructive))",
+              foreground: "hsl(var(--destructive-foreground))",
+            },
+            muted: {
+              DEFAULT: "hsl(var(--muted))",
+              foreground: "hsl(var(--muted-foreground))",
+            },
+            accent: {
+              DEFAULT: "hsl(var(--accent))",
+              foreground: "hsl(var(--accent-foreground))",
+            },
+            popover: {
+              DEFAULT: "hsl(var(--popover))",
+              foreground: "hsl(var(--popover-foreground))",
+            },
+            card: {
+              DEFAULT: "hsl(var(--card))",
+              foreground: "hsl(var(--card-foreground))",
+            },
+          },
+          borderRadius: {
+            lg: `var(--radius)`,
+            md: `calc(var(--radius) - 2px)`,
+            sm: "calc(var(--radius) - 4px)",
+          },
+          keyframes: {
+            "accordion-down": {
+              from: { height: "0" },
+              to: { height: "var(--radix-accordion-content-height)" },
+            },
+            "accordion-up": {
+              from: { height: "var(--radix-accordion-content-height)" },
+              to: { height: "0" },
+            },
+          },
+          animation: {
+            "accordion-down": "accordion-down 0.2s ease-out",
+            "accordion-up": "accordion-up 0.2s ease-out",
+          },
+        },
+      },
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "date-fns-tz": "https://esm.sh/date-fns-tz@^3.2.0",
+    "date-fns": "https://esm.sh/date-fns@^4.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.8.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.12",
+    "lucide-react": "https://esm.sh/lucide-react@^0.539.0",
+    "recharts": "https://esm.sh/recharts@^3.1.2",
+    "@radix-ui/react-slot": "https://esm.sh/@radix-ui/react-slot@^1.2.3",
+    "axios": "https://esm.sh/axios@^1.11.0",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^3.3.1",
+    "@radix-ui/react-toast": "https://esm.sh/@radix-ui/react-toast@^1.2.15",
+    "react-hook-form": "https://esm.sh/react-hook-form@^7.62.0",
+    "zod": "https://esm.sh/zod@^4.0.17",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@^5.85.3",
+    "@hookform/resolvers/": "https://esm.sh/@hookform/resolvers@^5.2.1/",
+    "class-variance-authority": "https://esm.sh/class-variance-authority@^0.7.1",
+    "@radix-ui/react-dropdown-menu": "https://esm.sh/@radix-ui/react-dropdown-menu@^2.1.16",
+    "@radix-ui/react-dialog": "https://esm.sh/@radix-ui/react-dialog@^1.1.15",
+    "@tanstack/react-table": "https://esm.sh/@tanstack/react-table@^8.21.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
